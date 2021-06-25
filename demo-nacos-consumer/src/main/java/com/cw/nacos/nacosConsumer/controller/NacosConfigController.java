@@ -1,6 +1,7 @@
 package com.cw.nacos.nacosConsumer.controller;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,7 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("config")
 public class NacosConfigController {
-    @NacosValue(value = "${useLocalCache:false}", autoRefreshed = true)
+//    @NacosValue(value = "${useLocalCache}", autoRefreshed = true)
+    @Value("${useLocalCache}")
     private boolean useLocalCache;
 
     @RequestMapping(value = "/get", method = RequestMethod.GET)

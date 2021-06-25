@@ -1,0 +1,15 @@
+custom:
+  nacos-ip: 127.0.0.1:8848
+spring:
+  application:
+    name: demo-nacos-consumer
+  cloud:
+    nacos:
+      config:
+        # 配置中心地址
+        server-addr: ${custom.nacos-ip}
+        # 默认dataid 的名称就是application的name加file-extension
+        file-extension: yaml
+        # 测试组
+        group: DEFAULT_GROUP
+        namespace: CW_GO
