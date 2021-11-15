@@ -5,6 +5,9 @@
       <sshConfig authType="PASSWORD" host="172.16.200.212" id="345cc1f7-f3dc-4c45-949f-36be2ce4bdab" port="22" customName="cngb-ssh" nameFormat="CUSTOM" username="root">
         <option name="customName" value="cngb-ssh" />
       </sshConfig>
+      <sshConfig authType="PASSWORD" host="172.16.200.212" id="286eb25b-21f3-4a5b-841d-835af03cabc3" port="22" customName="cngb-ssh" nameFormat="CUSTOM">
+        <option name="customName" value="cngb-ssh" />
+      </sshConfig>
     </configs>
   </component>
 </project>
