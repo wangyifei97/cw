@@ -35,15 +35,15 @@ public class 剑指Offer_25_合并两个排序的链表 {
         listNode2_01.next = listNode2_02;
         listNode2_02.next = listNode2_03;
 
-        System.out.println(NodeUtils.toString(mergeTwoLists(listNode1_01, listNode2_01)));
+        System.out.println(NodeUtils.toString(recursive(listNode1_01, listNode2_01)));
     }
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // 非空判断
-        if (l1 == null) {
+        if (null == l1) {
             return l2;
         }
-        if (l2 == null) {
+        if (null == l2) {
             return l1;
         }
 
@@ -52,7 +52,7 @@ public class 剑指Offer_25_合并两个排序的链表 {
         resultListNode.next = tempListNode;
 
         // 比较，并追加
-        while (l1 != null && l2 != null) {
+        while (null != l1 && l2 != null) {
             Integer tempInt;
             if (l1 == null) {
                 tempInt = l2.val;
@@ -90,5 +90,33 @@ public class 剑指Offer_25_合并两个排序的链表 {
         }
 
         return resultListNode.next.next;
+    }
+
+    /**
+     * @createAuthor: 王一飞
+     * @createDate: 2021/11/29 10:26 下午
+     * @description: 递归版本
+     */
+    public static ListNode recursive(ListNode l1, ListNode l2) {
+        // 非空判断
+        if (l1 == null && l2 == null) {
+            return null;
+        }
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
+
+        ListNode result;
+        if (l1.val <= l2.val) {
+            result = l1;
+            l1.next = recursive(l1.next, l2);
+        } else {
+            result = l2;
+            l2.next = recursive(l1, l2.next);
+        }
+        return result;
     }
 }
