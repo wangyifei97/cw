@@ -1,4 +1,4 @@
-package com.wyf.剑指Offer2;
+package com.wyf.liKou.剑指Offer2;
 
 import com.wyf.utils.ListNode;
 import com.wyf.utils.NodeUtils;
@@ -52,12 +52,12 @@ public class 剑指Offer_25_合并两个排序的链表 {
         resultListNode.next = tempListNode;
 
         // 比较，并追加
-        while (null != l1 && l2 != null) {
+        while (null != l1 && null != l2) {
             Integer tempInt;
-            if (l1 == null) {
+            if (null == l1) {
                 tempInt = l2.val;
             }
-            if (l2 == null) {
+            if (null == l2) {
                 tempInt = l1.val;
             }
             if (l1.val >= l2.val) {
@@ -72,7 +72,7 @@ public class 剑指Offer_25_合并两个排序的链表 {
         }
 
         // 判断 l1 是否还有剩余
-        while (l1 != null) {
+        while (null != l1) {
             int tempInt = l1.val;
             l1 = l1.next;
 
@@ -81,7 +81,7 @@ public class 剑指Offer_25_合并两个排序的链表 {
         }
 
         // 判断 l2 是否还有剩余
-        while (l2 != null) {
+        while (null != l2) {
             int tempInt = l2.val;
             l2 = l2.next;
 
@@ -99,13 +99,13 @@ public class 剑指Offer_25_合并两个排序的链表 {
      */
     public static ListNode recursive(ListNode l1, ListNode l2) {
         // 非空判断
-        if (l1 == null && l2 == null) {
+        if (null == l1 && null == l2) {
             return null;
         }
-        if (l1 == null) {
+        if (null == l1) {
             return l2;
         }
-        if (l2 == null) {
+        if (null == l2) {
             return l1;
         }
 

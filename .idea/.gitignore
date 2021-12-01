@@ -1,6 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/target/
 # Datasource local storage ignored files
 /../../../../../../:\soft\idealuwork\cngb\test1\.idea/dataSources/
 /dataSources.local.xml

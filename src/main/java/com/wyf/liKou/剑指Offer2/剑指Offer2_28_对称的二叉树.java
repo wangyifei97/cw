@@ -1,4 +1,4 @@
-package com.wyf.剑指Offer2;
+package com.wyf.liKou.剑指Offer2;
 
 /**
  * @Author wangyifei
@@ -7,7 +7,7 @@ package com.wyf.剑指Offer2;
  * @return $
  **/
 public class 剑指Offer2_28_对称的二叉树 {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
     }
 
@@ -29,15 +29,15 @@ public class 剑指Offer2_28_对称的二叉树 {
      * 链接：https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
-    public boolean isSymmetric(TreeNode root) {
-        return root == null ? true : helper(root.left, root.right);
+    public boolean isSymmetric(final TreeNode root) {
+        return null == root || helper(root.left, root.right);
     }
 
     public boolean helper(TreeNode root1, TreeNode root2) {
-        if (root1 == null && root2 == null) {
+        if (null == root1 && null == root2) {
             return true;
         }
-        if (root1 == null || root2 == null) {
+        if (null == root1 || null == root2) {
             return false;
         }
         return root1.val == root2.val
@@ -50,8 +50,8 @@ public class 剑指Offer2_28_对称的二叉树 {
         TreeNode left;
         TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
+        TreeNode(final int x) {
+            this.val = x;
         }
     }
 

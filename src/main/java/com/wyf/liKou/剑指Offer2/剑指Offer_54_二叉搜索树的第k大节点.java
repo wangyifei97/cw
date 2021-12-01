@@ -1,4 +1,4 @@
-package com.wyf.剑指Offer2;
+package com.wyf.liKou.剑指Offer2;
 
 import lombok.Data;
 

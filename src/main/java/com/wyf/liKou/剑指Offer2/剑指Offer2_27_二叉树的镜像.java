@@ -1,4 +1,4 @@
-package com.wyf.剑指Offer2;
+package com.wyf.liKou.剑指Offer2;
 
 import lombok.Data;
 
@@ -25,7 +25,7 @@ public class 剑指Offer2_27_二叉树的镜像 {
      * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
      */
     public static TreeNode mirrorTree(TreeNode root) {
-        if (root == null) {
+        if (null == root) {
             return root;
         }
         TreeNode tempNode = root.left;
@@ -35,7 +35,7 @@ public class 剑指Offer2_27_二叉树的镜像 {
     }
 
     public static TreeNode mirrorTree2(TreeNode root) {
-        if (root == null) {
+        if (null == root) {
             return root;
         }
         Stack<TreeNode> stack = new Stack<TreeNode>() {{
@@ -43,10 +43,10 @@ public class 剑指Offer2_27_二叉树的镜像 {
         }};
         while (! stack.isEmpty()) {
             TreeNode node = stack.pop();
-            if (node.left != null) {
+            if (null != node.left) {
                 stack.add(node.left);
             }
-            if (node.right != null) {
+            if (null != node.right) {
                 stack.add(node.right);
             }
             TreeNode temp = node.left;
