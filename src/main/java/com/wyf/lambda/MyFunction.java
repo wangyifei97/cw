@@ -16,7 +16,7 @@ public class MyFunction {
         Map<String, Object> stringObjectMap = myFunction.validateProcess(new Function<String, String>() {
             @Override
             public String apply(String s) {
-                return s+"123";
+                return s + "123";
             }
         });
         return stringObjectMap.get("a");
@@ -25,8 +25,8 @@ public class MyFunction {
     public Map<String, Object> validateProcess(Function<String, String> function) throws Exception {
         String apply = function.apply("456");
         //noinspection AlibabaCollectionInitShouldAssignCapacity
-        return new HashMap<String,Object>(){{
-           put("a",apply);
+        return new HashMap<String, Object>() {{
+            put("a", apply);
         }};
     }
 
@@ -38,5 +38,24 @@ public class MyFunction {
             e.printStackTrace();
         }
         System.err.println(o);
+    }
+}
+
+class MyAndThen {
+    public static Integer functionOne(Integer param) {
+        return param + 10;
+    }
+
+    public static Integer functionTwo(Integer param) {
+        return param - 5;
+    }
+
+    public static Integer forAndThen(Function<Integer, Integer> process1, Function<Integer, Integer> process2, Integer num) {
+        return process1.andThen(process2).apply(num);
+    }
+
+    public static void main(String[] args) {
+        Integer andThen = forAndThen(MyAndThen :: functionOne, MyAndThen :: functionTwo, 0);
+        System.err.println(andThen);
     }
 }
