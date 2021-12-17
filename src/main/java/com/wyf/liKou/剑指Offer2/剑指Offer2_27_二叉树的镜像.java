@@ -1,6 +1,6 @@
 package com.wyf.liKou.剑指Offer2;
 
-import lombok.Data;
+import com.wyf.utils.TreeNode;
 
 import java.util.Stack;
 
@@ -76,17 +76,6 @@ public class 剑指Offer2_27_二叉树的镜像 {
 
         TreeNode result = mirrorTree2(treeNode);
         System.out.println();
-    }
-
-    @Data
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 
 }

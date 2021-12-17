@@ -1,5 +1,7 @@
 package com.wyf.liKou.剑指Offer2;
 
+import com.wyf.utils.TreeNode;
+
 /**
  * @Author wangyifei
  * @Date $ $
@@ -43,16 +45,6 @@ public class 剑指Offer2_28_对称的二叉树 {
         return root1.val == root2.val
                 && helper(root1.left, root2.right)
                 && helper(root1.right, root2.left);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            this.val = x;
-        }
     }
 
 }

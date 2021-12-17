@@ -1,6 +1,6 @@
 package com.wyf.liKou.剑指Offer2;
 
-import lombok.Data;
+import com.wyf.utils.TreeNode;
 
 /**
  * @className: com.wyf.剑指Offer2-> 剑指Offer_54_二叉搜索树的第k大节点
@@ -66,17 +66,6 @@ public class 剑指Offer_54_二叉搜索树的第k大节点 {
 
         int resultInt = kthLargest(new TreeNode(1), 3);
         System.err.println(resultInt);
-    }
-
-    @Data
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 
 }

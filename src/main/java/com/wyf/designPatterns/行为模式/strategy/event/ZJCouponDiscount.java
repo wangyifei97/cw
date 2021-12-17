@@ -1,11 +1,11 @@
-package com.wyf.designPatterns.strategy.event;
+package com.wyf.designPatterns.行为模式.strategy.event;
 
-import com.wyf.designPatterns.strategy.ICouponDiscount;
+import com.wyf.designPatterns.行为模式.strategy.ICouponDiscount;
 
 import java.math.BigDecimal;
 
 /**
- * @className: com.wyf.designPatterns.strategy.event-> ZJCouponDiscount
+ * @className: com.wyf.designPatterns.行为模式.strategy.event-> ZJCouponDiscount
  * @author: 王一飞
  * @createDate: 2021-11-29 9:58 下午
  * @description:

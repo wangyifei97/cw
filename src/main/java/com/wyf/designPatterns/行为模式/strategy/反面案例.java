@@ -1,7 +1,7 @@
-package com.wyf.designPatterns.strategy;
+package com.wyf.designPatterns.行为模式.strategy;
 
 /**
- * @className: com.wyf.designPatterns.strategy-> 反面案例
+ * @className: com.wyf.designPatterns.行为模式.strategy-> 反面案例
  * @author: 王一飞
  * @createDate: 2021-11-29 9:45 下午
  * @description: 反面案例

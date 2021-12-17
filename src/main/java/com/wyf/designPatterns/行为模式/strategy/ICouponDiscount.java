@@ -1,9 +1,9 @@
-package com.wyf.designPatterns.strategy;
+package com.wyf.designPatterns.行为模式.strategy;
 
 import java.math.BigDecimal;
 
 /**
- * @className: com.wyf.designPatterns.strategy-> ICouponDiscount
+ * @className: com.wyf.designPatterns.行为模式.strategy-> ICouponDiscount
  * @author: 王一飞
  * @createDate: 2021-11-29 9:52 下午
  * @description: 接口：优惠劵金额计算
