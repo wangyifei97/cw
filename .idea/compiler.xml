@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-nacos-consumer" />
+        <module name="cw" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="CW_GO" options="-parameters" />
+      <module name="cw" options="-parameters" />
       <module name="demo-nacos-consumer" options="-parameters" />
       <module name="demo-nacos-sevice-consumer" options="-parameters" />
       <module name="nacos-config-demo" options="-parameters" />
